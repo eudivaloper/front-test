@@ -1,0 +1,25 @@
+<label [for]="id" class="form__label">{{ placeholder }}</label>
+<div class="form__input-div">
+    <input
+        [type]="type"
+        [placeholder]="placeholder"
+        [id]="id"
+        [name]="id"
+        [required]="required"
+        class="form__input"
+        [(ngModel)]="input.value"
+        (keydown)="onKeyDown($event)"
+        #input="ngModel"
+    />
+    <fa-icon [icon]="faEye"
+        class="input__icon"
+        [ngClass]="isPassword && type === 'password' ? 'input__icon--visible' :
+                   isPassword && type === 'text' ? 'input__icon--selected' : ''"
+        (click)="toggleInputPassword()">
+    </fa-icon>
+    <div class="form__input-messages" *ngIf="input.invalid && (input.touched || input.dirty)">
+        <span *ngIf="required && input.errors.required">
+            Campo obrigatório
+        </span>
+    </div>
+</div>

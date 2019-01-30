@@ -1,0 +1,18 @@
+<section class="form-pages">
+    <div class="form-pages__login">
+        <h1 class="form-pages__title">Entrar</h1>
+        <form
+            class="form"
+            #loginForm="ngForm"
+            (ngSubmit)="onSubmit(loginForm)">
+            <div class="form-pages__div-full-content">
+                <form-input type="email" placeholder="E-mail" id="email" required="true"></form-input>
+                <form-input type="password" isPassword="true" placeholder="Senha" id="senha" required="true"></form-input>
+                <a href="#" class="form-pages__detail">Esqueceu a senha?</a>
+            </div>
+            <form-button [isFormValid]="loginForm.valid" value="Entrar"></form-button>
+            <a href="/register" class="form-pages__link">Não tem uma conta? Cadastre-se</a>
+        </form>
+    </div>
+    <div class="form-pages__footer"></div>
+</section>

@@ -1,0 +1,61 @@
+<section class="form-pages form-pages--register">
+
+    <div class="form-pages__register">
+        <h1 class="form-pages__title">Cadastrar</h1>
+
+        <form class="form" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+
+            <div class="form-pages__columns">
+                <div class="form-pages__half-column form-pages__half-column--left">
+                <h2 class="form-pages__subtitle">Informações Pessoais</h2>
+                    <form-input type="text" placeholder="Nome/ Razão Social" id="name" required="true"></form-input>
+
+                    <div class="form-pages__columns">
+                        <div class="form-pages__half-column form-pages__half-column--left">
+                            <form-input type="text" placeholder="CPF" id="cpf" isNumeric="true" length="11" required="true"></form-input>
+                        </div>
+
+                        <div class="form-pages__half-column">
+                            <form-input type="text" placeholder="Telefone" id="telefone" isNumeric="true" length="11" required="true"></form-input>
+                        </div>
+                    </div>
+
+                    <form-input type="text" placeholder="E-mail" id="email" required="true"></form-input>
+                    <form-input type="password" isPassword="true" placeholder="Senha" id="senha" required="true"></form-input>
+                </div>
+
+                <div class="form-pages__half-column">
+                    <h2 class="form-pages__subtitle">Endereço</h2>
+
+                    <div class="form-pages__columns">
+                        <div class="form-pages__half-column form-pages__half-column--left">
+                            <form-input type="text" placeholder="CEP" id="cep" isNumeric="true" length="7" required="true"></form-input>
+                        </div>
+
+                        <div class="form-pages__half-column">
+                            <form-input type="text" placeholder="Logradouro" id="logradouro" required="true"></form-input>
+                        </div>
+                    </div>
+
+                    <div class="form-pages__columns">
+                        <div class="form-pages__half-column form-pages__half-column--left">
+                            <form-input type="text" placeholder="Número" id="numero" required="true"></form-input>
+                        </div>
+
+                        <div class="form-pages__half-column">
+                            <form-input type="text" placeholder="Bairro" id="bairro" required="true"></form-input>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <form-button [isFormValid]="registerForm.valid" value="Cadastrar"></form-button>
+            <a href="/login" class="form-pages__link">Já tem uma conta? Faça login</a>
+        </form>
+
+    </div>
+
+    <div class="form-pages__footer form-pages__footer--register"></div>
+</section>

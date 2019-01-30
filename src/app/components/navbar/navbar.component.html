@@ -1,0 +1,9 @@
+<nav class="navbar">
+    <img src="/assets/images/front-test-logo.svg" alt="Logo" class="navbar__logo"/>
+    <button
+        class="navbar__logout-button"
+        (click)="onLogout()"
+        [ngClass]="!isUserLogged() ? 'navbar__logout-button--hidden' : ''">
+        Logout
+    </button>
+</nav>

@@ -1,0 +1,73 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/images/bg-front.svg') no-repeat;
+    background-position: center;
+    background-size: 80%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 900px) {
+        background-size: 100%;
+    }
+
+    @media (max-width: 750px) {
+        height: 85vh;
+        background-size: 90%;
+    }
+
+    @media (max-width: 520px) {
+        background-size: 130%;
+        background-size: 120%;
+    }
+
+    @media (max-width: 420px) {
+        height: 95vh;
+        background-size: 140%;
+    }
+
+    &__logo {
+        margin: 2em 0;
+
+
+        @media (max-width: 750px) {
+            width: 250px;
+        }
+
+        @media (max-width: 420px) {
+            width: 200px;
+        }
+    }
+
+    & h1 {
+        margin: 0 0 .2em 0;
+        font-size: 1.2em;
+        text-align: center;
+        font-family: 'Mukta', 'Arial';
+        font-size: 20px;
+        color: white;
+        width: 60%;
+
+        @media (max-width: 750px) {
+            font-size: 20px;
+            width: 80%;
+        }
+
+        @media (max-width: 420px) {
+            font-size: 20px;
+            width: 90%;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        padding-left: 70px;
+        padding-right: 70px;
+        margin: 1.5em 0;
+    }
+}

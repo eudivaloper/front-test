@@ -1,0 +1,161 @@
+.card {
+    font-family: 'Mukta', Arial;
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px gray;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 900px) {
+        width: 245px;
+        padding: 30px 20px;
+    }
+
+    @media (max-width: 750px) {
+        width: 300px;
+        margin-bottom: 1.5em;
+    }
+
+    h2 {
+        margin: 0 0 1em 0;
+        color: #7626FF;
+        font-size: 20px;
+
+        @media (max-width: 900px) {
+            font-size: 20px;
+        }
+    }
+
+    &__picture-background {
+        background: url('/assets/images/bg-front.svg') no-repeat;
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 900px) {
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 1px solid #E0E1E2;
+        color: #585859;
+        padding-left: 70px;
+        padding-right: 70px;
+        margin: 1em 0;
+
+        @media (max-width: 900px) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+
+    .card__footer {
+        background: url('/assets/images/bottom-card.svg') no-repeat;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        height: 50px;
+        background-position: 51% 18%;
+    }
+
+    p {
+        color: #585859;
+    }
+
+    &--main {
+        width: 290px;
+        height: 440px;
+        z-index: 1;
+        box-shadow: 1px 2px 20px gray;
+
+        @media (max-width: 900px) {
+            width: 260px;
+            height: 430px;
+        }
+
+        @media (max-width: 750px) {
+            width: 300px;
+            height: auto;
+            box-shadow: 1px 2px 6px gray;
+        }
+
+        .card__button {
+            background-color: #7626FF;
+            border: 1px solid #7626FF;
+            color: white;
+            position: relative;
+            z-index: 2;
+
+            @media (max-width: 750px) {
+                background-color: white;
+                border: 1px solid #E0E1E2;
+                color: #585859;
+            }
+        }
+
+        .card__picture-background {
+            width: 150px;
+            height: 150px;
+
+            @media (max-width: 900px) {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        p {
+            margin-top: 30px;
+        }
+
+
+    }
+
+    &--left {
+        left: 20px;
+
+        .card__footer {
+            background-position: 1% 22%;
+        }
+    }
+
+    &--right {
+        right: 20px;
+
+        .card__footer {
+            background-position: 100% 23%;
+        }
+    }
+
+    @media (max-width: 900px) {
+        &--left {
+            left: 10px;
+        }
+
+        &--right {
+            right: 10px;
+        }
+    }
+
+    @media (max-width: 750px) {
+        &--left {
+            left: 0px;
+        }
+
+        &--right {
+            right: 0px;
+        }
+    }
+
+}
